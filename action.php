@@ -5,7 +5,7 @@ $id = isset($_GET["id"]) ? $_GET["id"] : "";
 if ($akcja == "pokaz") {
     if ($typ == "wpis") {
         if (!preg_match("/^[1-9]*$/", $id)) {
-            echo "Podaj prawidłowe id posta";
+            echo "Podaj prawidłowe id postaa";
         } else {
             $queryPosts = "SELECT wpisy.id, wpisy.tytul, wpisy.zawartosc, wpisy.data_publikacji, uzytkownicy.nazwa FROM wpisy LEFT JOIN uzytkownicy ON wpisy.uzytkownik_id=uzytkownicy.id WHERE wpisy.id=  '$id';";
             $resultPosts = $connect->query($queryPosts);
